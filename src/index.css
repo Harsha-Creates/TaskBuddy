@@ -1,0 +1,324 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  padding: 30px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffd600, #ff6b00);
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  color: #083225;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root > div {
+  background: #fff;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 20px;
+  padding: 32px 28px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.18), 0 1px 3px rgba(0,0,0,.08);
+}
+
+#root > div > h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 4px;
+}
+
+#root > div > p {
+  text-align: center;
+  color: #718096;
+  font-size: .95rem;
+  margin-bottom: 24px;
+}
+
+/* Form */
+.task-form {
+  margin-bottom: 20px;
+}
+
+#input {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+#input input[type="text"] {
+  flex: 1;
+  min-width: 220px;
+  padding: 12px 16px;
+  font-size: .95rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  outline: none;
+  background: #f8fafc;
+  color: #2d3748;
+}
+
+#input input[type="text"]:focus {
+  background: #fff;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102,126,234,.2);
+}
+
+#input span {
+  display: flex;
+}
+
+#input button[type="submit"] {
+  padding: 12px 20px;
+  background: linear-gradient(135deg,#05e57c,#08f347);
+  color: #fff;
+  font-size: .95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(102,126,234,.35);
+}
+
+#input h2 {
+  width: 100%;
+  font-size: .82rem;
+  font-weight: 600;
+  color: #5a67d8;
+  background: #ebf4ff;
+  border: 1px dashed #bee3f8;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 4px;
+}
+
+#btns {
+  display: flex;
+  gap: 12px;
+}
+
+#btns select {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: .9rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #4a5568;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Progress */
+.progress-tracker {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin: 22px 0;
+  text-align: center;
+}
+
+.progress-tracker p {
+  font-size: .92rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg,#10b981,#059669);
+  border-radius: 999px;
+  transition: width .4s ease, transform .4s ease;
+  box-shadow: 0 2px 8px rgba(16,185,129,.4);
+  transform-origin: left center;
+  
+}
+
+/* Tasks */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: #fff;
+  border: 1.5px solid #edf2f7;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.02);
+}
+
+.task-list li > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  margin-right: 12px;
+}
+
+.task-list li > div:first-child span {
+  font-size: .98rem;
+  font-weight: 500;
+  color: #2d3748;
+  word-break: break-word;
+}
+
+.task-list li > div:first-child small {
+  font-size: .75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  color: #718096;
+}
+
+.task-list li > div:last-child {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.task-list li button {
+  padding: 7px 14px;
+  font-size: .82rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.task-list li button:first-child {
+  background: #10b981;
+  color: #fff;
+}
+
+.task-list li button:last-child {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+/* Clear */
+.clear-btn {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #fff5f5;
+  color: #e53e3e;
+  border: 1.5px dashed #feb2b2;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+/* Application */
+.app {
+  min-height: 100vh;
+  width: 100%;
+  background: white;
+  color: #222;
+  padding: 30px;
+  transition: .3s ease;
+}
+
+.app.dark {
+  background: #121212;
+  color: white;
+}
+
+body:has(.app.dark) {
+  background: #121212 !important;
+}
+
+.app.dark h1,
+.app.dark h2,
+.app.dark h3,
+.app.dark p,
+.app.dark span,
+.app.dark label {
+  color: white;
+}
+
+.app.dark input,
+.app.dark select {
+  background: #2b2b2b;
+  color: white;
+  border: 1px solid #555;
+}
+
+.app.dark input::placeholder {
+  color: #aaa;
+}
+
+.app.dark .task-list li,
+.app.dark .progress-tracker {
+  background: #1e1e1e;
+  color: white;
+}
+
+.app.dark small {
+  color: #bbb;
+}
+
+.app.dark button {
+  color: white;
+  background: #333;
+  border-color: #555;
+}
+
+.app.dark .progress {
+  background-color: #10b981;
+}
+
+/* Theme button */
+.theme-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #222;
+  color: white;
+}
+
+.app.dark .theme-btn {
+  background: white;
+  color: black;
+}
